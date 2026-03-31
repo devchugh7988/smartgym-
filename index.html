@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Gym AI Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <h1>🏋️ Smart Gym  AI Trainer</h1>
+
+  <div class="controls">
+    <select id="exercise">
+      <option>Squat</option>
+    
+    </select>
+
+    <button onclick="startCamera()">Start</button>
+    <button onclick="stopCamera()">Stop</button>
+  </div>
+
+  <div class="video-container">
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div class="status-card" id="status">
+    Waiting for detection...
+  </div>
+
+</div>
+
+<!-- MediaPipe -->
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
