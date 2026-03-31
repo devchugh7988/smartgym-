@@ -184,7 +184,12 @@ if (!squatStarted) {
 }
 
 // now real feedback starts
-if (angle > 160) {
+  if (angle <70 ) {
+  status.innerText = "injury risk  ";
+  status.style.color = "red ";
+  updateState("up", "move up");
+} 
+ else if (angle > 160) {
   status.innerText = "⬆️ Go Down";
   status.style.color = "orange";
   updateState("up", "Go down slowly");
